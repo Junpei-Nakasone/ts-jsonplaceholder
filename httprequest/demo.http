@@ -1,0 +1,26 @@
+GET http://localhost:9000/
+
+###
+POST http://localhost:9000/api/v1/create
+Content-Type: application/json
+
+{
+    "title": "task2",
+    "completed": false
+}
+
+###
+GET http://localhost:9000/api/v1/read
+
+###
+GET http://localhost:9000/api/v1/read/9759989d-9bfe-45a5-8449-ce8cd74fbb44
+
+###
+GET http://localhost:9000/api/v1/read/fc7e8c64-e187-4e3e-9bf1-3e48b966241e
+
+###
+PUT  http://localhost:9000/update/api/v1/fc7e8c64-e187-4e3e-9bf1-3e48b966241e
+
+
+###
+DELETE  http://localhost:9000/update/api/v1/fc7e8c64-e187-4e3e-9bf1-3e48b966241a
