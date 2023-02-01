@@ -31,3 +31,39 @@ TodoInstance.init(
         tableName: "todos",
     }
 )
+
+
+interface UserAttributes {
+    id: string;
+    name: string;
+    username: string;
+    email: string;
+}
+
+export class UserInstance extends Model<UserAttributes> {}
+
+UserInstance.init(
+    {
+        id: {
+            type: DataTypes.UUIDV4,
+            primaryKey: true,
+            allowNull: false,
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+    },
+    {
+        sequelize: db,
+        tableName: "users",
+    }
+)
